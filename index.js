@@ -2,6 +2,8 @@ var path = document.querySelector("#Transparent_Ring");
 var pathLength = path.getTotalLength();
 path.style.strokeDasharray = pathLength + " " + pathLength;
 path.style.strokeDashoffset = pathLength;
+// path.getBoundingClientRect();
+window.scroll(0, 1);
 function scrollToThis(length) {
   window.scroll(0, length * 335);
 }
@@ -307,7 +309,7 @@ window.addEventListener("scroll", function (e) {
       contentright,
       2,
       { backgroundColor: "#0d141c" },
-      { backgroundColor: "#3addda" }
+      { backgroundColor: "#FB9300" }
     );
 
     for (i = 0; i < six.length; i++) {
