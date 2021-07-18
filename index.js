@@ -364,7 +364,7 @@ window.addEventListener("scroll", function (e) {
       contentright,
       2,
       { backgroundColor: "#0d141c" },
-      { backgroundColor: "#3addda" }
+      { backgroundColor: "#FB9300" }
     );
 
     for (i = 0; i < six.length; i++) {
