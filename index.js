@@ -2,11 +2,24 @@ var path = document.querySelector("#Transparent_Ring");
 var pathLength = path.getTotalLength();
 path.style.strokeDasharray = pathLength + " " + pathLength;
 path.style.strokeDashoffset = pathLength;
-// path.getBoundingClientRect();
+
+path.getBoundingClientRect();
+
 window.scroll(0, 1);
+
 function scrollToThis(length) {
   window.scroll(0, length * 335);
+
+  var w = window.innerWidth;
+  var h = window.innerHeight;
+
+  console.log(length * 335, h);
 }
+
+var w = window.innerWidth;
+var h = window.innerHeight;
+console.log(w, h);
+
 window.addEventListener("scroll", function (e) {
   var scrollPercentage =
     (document.documentElement.scrollTop + document.body.scrollTop) /
@@ -128,10 +141,17 @@ window.addEventListener("scroll", function (e) {
     }
 
     for (i = 0; i < up.length; i++) {
-      up[i].style.animation = "up 1s linear forwards";
+      up[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < down.length; i++) {
-      down[i].style.animation = "down 1s linear forwards";
+      down[i].style.animation = "down 0.8s ease forwards";
+    }
+
+    for (i = 0; i < upTwo.length; i++) {
+      upTwo[i].style.animation = "";
+    }
+    for (i = 0; i < downTwo.length; i++) {
+      downTwo[i].style.animation = "";
     }
 
     for (i = 0; i < second.length; i++) {
@@ -141,7 +161,7 @@ window.addEventListener("scroll", function (e) {
   }
   //TWO
   if (scp > 16.66 && scp <= 33.33) {
-    path.style.animation = "dot1 0.3s linear forwards";
+    path.style.animation = "dot1 0.3s ease forwards";
     dot1.style.opacity = 1;
     dot1.style.fill = "rgb(0,146,255)";
     dot2.style.opacity = 0.4;
@@ -179,10 +199,10 @@ window.addEventListener("scroll", function (e) {
     }
 
     for (i = 0; i < upTwo.length; i++) {
-      upTwo[i].style.animation = "up 1s linear forwards";
+      upTwo[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downTwo.length; i++) {
-      downTwo[i].style.animation = "down 1s linear forwards";
+      downTwo[i].style.animation = "down 0.8s ease forwards";
     }
 
     for (i = 0; i < second.length; i++) {
@@ -192,10 +212,17 @@ window.addEventListener("scroll", function (e) {
       third[i].style.visibility = "hidden";
       third[i].style.animation = "";
     }
+
+    for (i = 0; i < upThree.length; i++) {
+      upThree[i].style.animation = "";
+    }
+    for (i = 0; i < downThree.length; i++) {
+      downThree[i].style.animation = "";
+    }
   }
   //THREE
   if (scp > 33.33 && scp <= 50) {
-    path.style.animation = "dot2 0.3s linear forwards";
+    path.style.animation = "dot2 0.3s ease forwards";
     dot2.style.opacity = 1;
     dot2.style.fill = "rgb(0,146,255)";
     dot3.style.opacity = 0.4;
@@ -224,11 +251,19 @@ window.addEventListener("scroll", function (e) {
       second[i].style.visibility = "hidden";
       second[i].style.animation = "";
     }
+
+    for (i = 0; i < upTwo.length; i++) {
+      upTwo[i].style.animation = "";
+    }
+    for (i = 0; i < downTwo.length; i++) {
+      downTwo[i].style.animation = "";
+    }
+
     for (i = 0; i < upThree.length; i++) {
-      upThree[i].style.animation = "up 1s linear forwards";
+      upThree[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downThree.length; i++) {
-      downThree[i].style.animation = "down 1s linear forwards";
+      downThree[i].style.animation = "down 0.8s ease forwards";
     }
 
     for (i = 0; i < third.length; i++) {
@@ -238,10 +273,16 @@ window.addEventListener("scroll", function (e) {
     for (i = 0; i < four.length; i++) {
       four[i].style.visibility = "hidden";
     }
+    for (i = 0; i < upFour.length; i++) {
+      upFour[i].style.animation = "";
+    }
+    for (i = 0; i < downFour.length; i++) {
+      downFour[i].style.animation = "";
+    }
   }
   function four() {}
   if (scp > 50 && scp <= 66.66) {
-    path.style.animation = "dot3 0.3s linear forwards";
+    path.style.animation = "dot3 0.3s ease forwards";
     dot3.style.opacity = 1;
     dot3.style.fill = "rgb(0,146,255)";
     dot4.style.opacity = 0.4;
@@ -269,11 +310,19 @@ window.addEventListener("scroll", function (e) {
     for (i = 0; i < third.length; i++) {
       third[i].style.visibility = "hidden";
     }
+
+    for (i = 0; i < upThree.length; i++) {
+      upThree[i].style.animation = "";
+    }
+    for (i = 0; i < downThree.length; i++) {
+      downThree[i].style.animation = "";
+    }
+
     for (i = 0; i < upFour.length; i++) {
-      upFour[i].style.animation = "up 1s linear forwards";
+      upFour[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downFour.length; i++) {
-      downFour[i].style.animation = "down 1s linear forwards";
+      downFour[i].style.animation = "down 0.8s ease forwards";
     }
 
     for (i = 0; i < four.length; i++) {
@@ -283,10 +332,16 @@ window.addEventListener("scroll", function (e) {
     for (i = 0; i < five.length; i++) {
       five[i].style.visibility = "hidden";
     }
+    for (i = 0; i < upFive.length; i++) {
+      upFive[i].style.animation = "";
+    }
+    for (i = 0; i < downFive.length; i++) {
+      downFive[i].style.animation = "";
+    }
   }
   //FIVE
   if (scp > 66.66 && scp <= 83.33) {
-    path.style.animation = "dot4 0.3s linear forwards";
+    path.style.animation = "dot4 0.3s ease forwards";
     dot4.style.opacity = 1;
     dot4.style.fill = "rgb(0,146,255)";
     dot5.style.opacity = 0.4;
@@ -309,7 +364,7 @@ window.addEventListener("scroll", function (e) {
       contentright,
       2,
       { backgroundColor: "#0d141c" },
-      { backgroundColor: "#FB9300" }
+      { backgroundColor: "#3addda" }
     );
 
     for (i = 0; i < six.length; i++) {
@@ -325,14 +380,28 @@ window.addEventListener("scroll", function (e) {
     }
 
     for (i = 0; i < upFive.length; i++) {
-      upFive[i].style.animation = "up 1s linear forwards";
+      upFive[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downFive.length; i++) {
-      downFive[i].style.animation = "down 1s linear forwards";
+      downFive[i].style.animation = "down 0.8s ease forwards";
+    }
+
+    for (i = 0; i < upFour.length; i++) {
+      upFour[i].style.animation = "";
+    }
+    for (i = 0; i < downFour.length; i++) {
+      downFour[i].style.animation = "";
+    }
+
+    for (i = 0; i < upSix.length; i++) {
+      upSix[i].style.animation = "";
+    }
+    for (i = 0; i < downSix.length; i++) {
+      downSix[i].style.animation = "";
     }
   } //SIX
   if (scp > 83.33 && scp <= 100) {
-    path.style.animation = "dot5 0.3s linear forwards";
+    path.style.animation = "dot5 0.3s ease forwards";
     dot5.style.opacity = 1;
     dot5.style.fill = "rgb(0,146,255)";
     dot6.style.opacity = 0.4;
@@ -361,18 +430,31 @@ window.addEventListener("scroll", function (e) {
     }
 
     for (i = 0; i < upSix.length; i++) {
-      upSix[i].style.animation = "up 1s linear forwards";
+      upSix[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downSix.length; i++) {
-      downSix[i].style.animation = "down 1s linear forwards";
+      downSix[i].style.animation = "down 0.8s ease forwards";
     }
 
     for (i = 0; i < seven.length; i++) {
       seven[i].style.visibility = "hidden";
     }
+    for (i = 0; i < upFive.length; i++) {
+      upFive[i].style.animation = "";
+    }
+    for (i = 0; i < downFive.length; i++) {
+      downFive[i].style.animation = "";
+    }
+
+    for (i = 0; i < upSeven.length; i++) {
+      upSeven[i].style.animation = "";
+    }
+    for (i = 0; i < downSeven.length; i++) {
+      downSeven[i].style.animation = "";
+    }
   } //SEVEN
   if (scp >= 100) {
-    path.style.animation = "dot6 0.3s linear forwards";
+    path.style.animation = "dot6 0.3s ease forwards";
     dot6.style.opacity = 1;
     dot6.style.fill = "rgb(0,146,255)";
     dotTro6.style.opacity = 1;
@@ -401,10 +483,17 @@ window.addEventListener("scroll", function (e) {
       seven[i].style.visibility = "visible";
     }
     for (i = 0; i < upSeven.length; i++) {
-      upSeven[i].style.animation = "up 1s linear forwards";
+      upSeven[i].style.animation = "up 0.8s ease forwards";
     }
     for (i = 0; i < downSeven.length; i++) {
-      downSeven[i].style.animation = "down 1s linear forwards";
+      downSeven[i].style.animation = "down 0.8s ease forwards";
+    }
+
+    for (i = 0; i < upSix.length; i++) {
+      upSix[i].style.animation = "";
+    }
+    for (i = 0; i < downSix.length; i++) {
+      downSix[i].style.animation = "";
     }
   }
 });
