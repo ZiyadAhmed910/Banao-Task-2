@@ -420,6 +420,12 @@ window.addEventListener("scroll", function (e) {
       { backgroundColor: "#184d9d" },
       { backgroundColor: "#06298d" }
     );
+    TweenMax.fromTo(
+      contentright,
+      2,
+      { backgroundColor: "#3addda" },
+      { backgroundColor: "#CC811E" }
+    );
 
     for (i = 0; i < five.length; i++) {
       five[i].style.visibility = "hidden";
